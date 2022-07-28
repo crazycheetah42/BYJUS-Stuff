@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Names</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <center>
+        <p>1. </p><input type="text" id="first_name">
+        <br />
+        <p>2. </p><input type="text" id="second_name">
+        <br />
+        <p>3. </p><input type="text" id="third_name">
+        <br />
+        <p>4. </p><input type="text" id="fourth_name">
+        <br />
+        <button type="submit" onclick="list()" id="submit_button">Submit</button>
+        <br />
+        <button type="submit" onclick="sort()" id="sort_button">Sort</button>
+        <br />
+        <p id="result_of_sorting"></p>
+    </center>
+    <script>
+        var list_of_names = [];
+        function list() {
+            f_name = document.getElementById("first_name").value;
+            s_name = document.getElementById("second_name").value;
+            t_name = document.getElementById("third_name").value;
+            fo_name = document.getElementById("fourth_name").value;
+            list_of_names.push(f_name);
+            list_of_names.push(s_name);
+            list_of_names.push(t_name);
+            list_of_names.push(fo_name);
+            console.log(list_of_names);
+            document.getElementById("submit_button").style.display = "none";
+            document.getElementById("sort_button").style.display = "inline";
+        }
+        function sort() {
+            var sorted = list_of_names.sort();
+            console.log(sorted);
+            document.getElementById("result_of_sorting").innerHTML = sorted;
+        }
+    </script>
+</body>
+</html>
