@@ -12,6 +12,7 @@ menu_list_array = ["Veg Margherita Pizza",
             htmldata=htmldata+ menu_list_array[i] + '<br>'
         }
         document.getElementById("display_menu").innerHTML = htmldata;
+	document.getElementById("menu_list").innerHTML = "Reload Menu";
     }
 
     function add_item(){
