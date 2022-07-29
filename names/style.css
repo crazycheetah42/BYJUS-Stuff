@@ -1,3 +1,9 @@
 #sort_button{
     display: none;
 }
+#result_of_sorting_with_commas{
+    background_color: greenyellow;
+}
+#result_of_sorting_without_commas{
+    background_color: lightcoral;
+}
